@@ -4,10 +4,19 @@
 
 import React from 'react'
 import ReactDOM from 'react-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import PropTypes from 'prop-types'
+import Header from './header_react.jsx'
+import Counter from './counter_react.jsx'
 
 const Hello = props => (
-  <div>Hello {props.name}!</div>
+  <MuiThemeProvider>
+    <div>
+      <div><Header /></div>
+      <h1>Hello, {props.name}</h1>
+      <Counter />
+    </div>
+  </MuiThemeProvider>
 )
 
 Hello.defaultProps = {
